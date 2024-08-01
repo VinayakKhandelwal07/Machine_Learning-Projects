@@ -9,3 +9,6 @@ Projects----
                Description:  Predicts bike rental demand using historical data.
                Key Techniques:  Regression algorithms, data preprocessing, feature engineering.
                Results:   Improved resource management and operational efficiency.
+
+
+2 . Flight Customers Satisfaction Model 
