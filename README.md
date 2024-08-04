@@ -12,3 +12,25 @@ Projects----
 
 
 2 . Flight Customers Satisfaction Model 
+                      
+                      Overview        This project presents an interactive web application that visualizes and analyzes airline customer satisfaction data. Built 
+                                      using HTML, CSS, JavaScript, and the Flask framework, it offers a user-friendly interface for exploring and understanding customer 
+                                      feedback.
+
+                    Key Features
+                                    Data Visualization: Interactive charts and graphs to display satisfaction metrics.
+                                    Dynamic Filters: Options to filter data by criteria such as flight duration or airline.
+                                    Real-Time Updates: Live updates to visualizations based on user interactions.
+                                    Intuitive Design: A clean, modern interface for easy navigation and analysis.
+                    Technologies
+                                   HTML/CSS: For structuring and styling the web interface.
+                                   JavaScript: For interactive features and dynamic data display.
+                                   Flask: For backend data processing and integration with the frontend.
+                    Purpose
+                                  The application helps users explore customer satisfaction trends and factors affecting flight experiences through an engaging and interactive 
+                                  platform.
+
+
+
+
+
