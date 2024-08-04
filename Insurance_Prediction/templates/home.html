@@ -1,1 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insurance Price Prediction Model</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f6f7;
+            color: #333;
+        }
+        .navbar {
+            background: #e6effa;
+            padding: 1rem;
+            border-bottom: 1px solid #eaeaea;
+        }
+        .navbar-brand {
+            font-size: 1.75rem;
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .navbar-nav .nav-link {
+            font-size: 1.1rem;
+            color: #ffffff;
+            margin-left: 1rem;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #d0d0d0;
+        }
+        .jumbotron {
+            background: #003d80;
+            color: #ffffff;
+            padding: 5rem 2rem;
+            border-radius: 0.75rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #002060;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .jumbotron h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeIn 1.5s ease-in-out;
+            z-index: 1;
+            position: relative;
+        }
+        .jumbotron a {
+            position: relative;
+            z-index: 1;
+            transition: background 0.3s ease, transform 0.3s ease;
+            border-radius: 50px;
+            padding: 1rem 2rem;
+            font-size: 1.25rem;
+            background-color: #007bff;
+            border: none;
+            color: #ffffff;
+        }
+        .jumbotron a:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        .section {
+            background: #ffffff;
+            color: #333;
+            border-radius: 0.75rem;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: -5rem;
+            position: relative;
+            z-index: 1;
+        }
+        .section img {
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 350px;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #003d80;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        .footer {
+            background: #003d80;
+            color: #ffffff;
+            padding: 2rem 1rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .footer .container p {
+            margin: 0;
+        }
+        .social-icons {
+            margin-top: 1rem;
+        }
+        .social-icons a {
+            color: #0f0000;
+            font-size: 1.75rem;
+            margin: 0 0.75rem;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #d0d0d0;
+            transform: scale(1.1);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @media (max-width: 768px) {
+            .section {
+                margin-top: 0;
+            }
+            .navbar-nav .nav-link {
+                margin-left: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">Insurance Price Prediction Model</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <h1 class="display-4">Predict Your Insurance Premiums</h1>
+        <a class="btn btn-primary btn-lg" href="project.html" role="button">Go to Project</a>
+    </header>
+
+    <section id="about" class="container section mt-5">
+        <h2>Description:</h2>
+        <p>
+            <strong>Overview:</strong> This project builds a machine learning model to predict insurance premiums based on individual characteristics. By analyzing age, gender, smoking status, region, and number of children, the model provides accurate insurance price estimates.
+            <br><br>
+            <strong>Objective:</strong> Create a predictive model to assist insurers in setting fair rates and help customers plan their insurance budgets.
+            <br><br>
+            <strong>Inputs:</strong>
+            <ul>
+                <li><strong>Age:</strong> Age of the insured.</li>
+                <li><strong>Gender:</strong> Gender of the insured.</li>
+                <li><strong>Smoker Status:</strong> Whether the insured is a smoker (Yes/No).</li>
+                <li><strong>Region:</strong> Geographical location of the insured.</li>
+                <li><strong>Number of Children:</strong> Count of children in the insured’s household.</li>
+            </ul>
+            <strong>Modeling Techniques:</strong>
+            <ul>
+                <li><strong>Linear Regression:</strong> Models the linear relationship between inputs and insurance charges.</li>
+                <li><strong>Decision Tree Regression:</strong> Captures non-linear patterns and interactions among features.</li>
+                <li><strong>Random Forest Regression:</strong> Improves accuracy by averaging multiple decision trees.</li>
+            </ul>
+            <strong>Implementation:</strong>
+            <ul>
+                <li><strong>Data Collection:</strong> Historical data on insurance premiums and features.</li>
+                <li><strong>Preprocessing:</strong> Data cleaning and feature selection.</li>
+                <li><strong>Training and Evaluation:</strong> Models trained and evaluated using metrics like MAE and RMSE.</li>
+            </ul>
+            <strong>Applications:</strong>
+            <ul>
+                <li>Insurance Companies: For setting accurate premiums.</li>
+                <li>Customers: To estimate and plan for insurance costs.</li>
+                <li>Regulatory Bodies: For ensuring transparent pricing.</li>
+            </ul>
+            <strong>Conclusion:</strong> The model effectively uses linear, decision tree, and random forest regressions to predict insurance costs, supporting better decision-making for both insurers and customers.
+        </p>
+    </section>
+
+    <section id="about-me" class="container section mt-5 d-flex flex-column flex-md-row align-items-center">
+        <div class="mb-4 mb-md-0">
+            <img src="/static/Vinayak.jpg" alt="Vinayak" class="img-fluid rounded-circle shadow">
+        </div>
+        <div class="ms-md-4">
+            <h2>About Me:</h2>
+            <p>
+                I’m <strong>Vinayak Khandelwal</strong>, a third-year Computer Science student with a deep passion for <strong>Data Science</strong>. Currently, I’m diving into <strong>machine learning</strong>, <strong>data analysis</strong>, and <strong>visualization</strong> through hands-on projects and internships.
+                <br><br>
+                I excel at turning data into actionable insights and am eager to explore new challenges in <strong>AI</strong> and <strong>predictive modeling</strong>. My background in <strong>front-end development</strong> (HTML, CSS, JavaScript) complements my technical skills, allowing me to create intuitive user experiences.
+                <br><br>
+                Outside of work, I enjoy tackling personal projects, competing in data science challenges, and staying up-to-date with the latest tech trends. I’m always looking to collaborate and innovate—let’s connect and explore the possibilities!
+            </p>
+            <div class="social-icons">
+                <a href="https://github.com/VinayakKhandelwal07" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/vinayak-khandelwal-b3216425a/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Vinayak Khandelwal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka4O4HQ1qo4NFEymU4epzzSGyIs61nMRNvcgdlVutLXkOW3q9K6mE3zQd5D0YcX2" crossorigin="anonymous"></script>
+</body>
+
+</html>
