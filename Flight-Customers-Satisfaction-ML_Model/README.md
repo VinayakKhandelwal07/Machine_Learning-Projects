@@ -9,11 +9,11 @@ Overview
 Contents
          data/: Contains datasets used for training and testing the model.
          notebooks/: Jupyter notebooks for exploratory data analysis (EDA) and model development.
-         models/: Contains the trained machine learning model files.
+         models/: Contins the trained machine learning model files.
          static/: Static assets like CSS and JavaScript files for the web application.
          templates/: HTML templates used in the Flask web application.
          app.py: The main Flask application script that serves the web interface.
-        requirements.txt: List of Python packages required to run the application.
+         requirements.txt: List of Python packages required to run the application.
 
 
 Prerequisites
