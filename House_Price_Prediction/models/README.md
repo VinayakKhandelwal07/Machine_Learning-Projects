@@ -1,0 +1,3 @@
+Lasso 
+Ridget
+Linear
