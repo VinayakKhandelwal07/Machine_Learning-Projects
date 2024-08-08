@@ -19,3 +19,16 @@ Contents
 Prerequisites
           Python: Ensure Python 3.6 or higher is installed on your machine.
           Flask: A lightweight web framework for Python.
+
+Inputs
+          Each feature seems to represent different aspects of a flight, such as:
+          - duration: Flight duration
+          - days_left: Days left until the flight
+          - price: Price of the flight
+          - airline_*: Different airlines
+          - source_city_*: Different source cities
+          - departure_time_*: Different times of departure
+          - stops_*: Number of stops
+          - arrival_time_*: Different times of arrival
+          - destination_city_*: Different destination cities
+          - class_Business: Indicates whether the flight is business class
