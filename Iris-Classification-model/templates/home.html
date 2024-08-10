@@ -1,1 +1,81 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iris Classification Model</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            text-align: center;
+            background-image: url('Iris-Background.jpg'); /* Replace with your background image path */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Ensure the background image stays fixed */
+        }
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(238, 223, 195, 0.6); /* Slightly darker overlay for better readability */
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 700px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Added shadow for a modern touch */
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #8f3de2; /* Bright color for the heading */
+        }
+        p {
+            color: rgb(19, 18, 17);
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            color: #fff;
+            background-color: #9d88d6; /* Modern blue color */
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .button:hover {
+            background-color: #890be3; /* Darker blue for hover */
+            transform: translateY(-2px); /* Subtle lift effect */
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            .button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the Iris Classification Model</h1>
+        <p>Discover the power of machine learning with our Iris Classification Model. Enter petal and sepal dimensions to classify iris flowers into three categories: Setosa, Versicolor, and Virginica.</p>
+        <a href="form.html" class="button">Try the Model</a>
+    </div>
+</body>
+</html>
