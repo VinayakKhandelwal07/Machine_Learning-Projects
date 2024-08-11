@@ -1,6 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MailChokidaar</title>
+    <title>SpamYaGenuine - Spam & Ham Mail Checker</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8ff; 
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: #ffffff; /* White background */
+            color: #004080; /* blue */
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6em;
+            color: #004080; 
+        }
+
+        header nav {
+            display: flex;
+        }
+
+        header nav a {
+            color: #004080; 
+            margin: 0 20px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #001f3f; /* Darker blue */
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background: url('/static/Back_.jpg') no-repeat center center/cover;
+            color: #ffffff; /* White text */
+            padding: 150px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid #004080; /* blue */
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+            z-index: 1;
+        }
+
+        .hero div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 3.8em;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.6em;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .btn {
+            background: #004080; /* blue */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:hover {
+            background: #001f3f; /* Darker blue */
+            transform: scale(1.05);
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin: -100px auto 40px;
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.7s ease-in-out;
+        }
+
+        .form-container h3 {
+            margin-top: 0;
+            font-size: 2.5em;
+            color: #004080;
+            border-bottom: 2px solid #004080;
+            padding-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group textarea:focus {
+            border-color: #004080; /* -blue */
+            outline: none;
+        }
+
+        footer {
+            background: #f7f7f8; /* Light gray */
+            color: #004080; /* Sky-blue */
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #004080; /* Sky-blue */
+            margin: 0 15px;
+            font-size: 1.8em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #001f3f; /* Darker blue */
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .form-container {
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            footer {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>SpamYaGenuine</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="#demo">Demo</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h2>Welcome to SpamYaGenuine</h2>
+            <p>Efficiently identify spam and genuine emails with our advanced machine learning model.</p>
+            <a href="#demo" class="btn">Try It Now</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="demo" class="form-container">
+            <h3>Check Your Email</h3>
+            <form action="/prediction" method="post">
+
+                <div class="form-group">
+                    <label for="emailContent">Message</label>
+                    <textarea id="emailContent" name="emailContent" rows="10" required></textarea>
+                </div>
+                <button type="submit"  class="btn">Analyze</button>
+                
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 SpamYaGenuine. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/VinayakKhandelwal07/Machine_Learning-Projects/tree/main/Email_Classification" target="_blank" title="github"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vinayak-khandelwal-b3216425a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
