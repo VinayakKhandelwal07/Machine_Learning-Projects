@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Spam Ya Genuine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: white;
+            color: #004080;
+            padding: 15px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.6em;
+            color: #004080;
+        }
+
+        header nav {
+            display: flex;
+        }
+
+        header nav a {
+            color:#004080;
+            margin: 0 20px;
+            text-decoration: solid;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #d0d0d0;
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background: url('/static/about-image.jpeg') no-repeat center center/cover;
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 5px solid #007acc;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+        }
+
+        .hero div {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-section {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            margin-top: -100px;
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.7s ease-in-out;
+        }
+
+        .about-section h3 {
+            font-size: 2.5em;
+            color: #004080;
+            border-bottom: 3px solid #007acc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .about-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .about-section li {
+            margin-bottom: 10px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .profile img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            margin-right: 20px;
+            border: 5px solid #007acc;
+        }
+
+        .profile div {
+            max-width: 600px;
+        }
+
+        .profile h4 {
+            font-size: 2em;
+            color: #004080;
+            margin-top: 0;
+        }
+
+        .profile p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: white;
+            color: #004080;
+            padding: 20px 0;
+            text-align: center;
+            border-top: 1px solid #ddd;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+            color: #004080;
+        }
+
+        .social-icons {
+            margin-top: 10px;
+        }
+
+        .social-icons a {
+            color: #004080;
+            margin: 0 15px;
+            font-size: 1.8em;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #d0d0d0;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5em;
+            }
+
+            .hero p {
+                font-size: 1.2em;
+            }
+
+            .about-section {
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            footer {
+                padding: 15px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Spam Ya Genuine</h1>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/about">About</a>
+                
+                
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="container">
+            <h2>About Spam Ya Genuine</h2>
+            <p>Discover how our intelligent email classification system can simplify your inbox management.</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <section id="about" class="about-section">
+            <h3>About Spam Ya Genuine</h3>
+            <p>Welcome to Spam Ya Genuine! Our system is designed to efficiently distinguish between spam (unwanted or junk) and ham (genuine and legitimate) emails using advanced machine learning techniques. We provide a seamless solution to help you manage your inbox more effectively.</p>
+
+            <h3>How It Works</h3>
+            <p>Spam Ya Genuine employs several sophisticated algorithms to ensure high precision in email classification:</p>
+            <ul>
+                <li><strong>Multinomial Naive Bayes:</strong> Analyzes the frequency of words in emails to differentiate between spam and genuine messages based on term frequency.</li>
+                <!-- <li><strong>Gaussian Naive Bayes:</strong> Assumes features follow a Gaussian distribution, used to explore alternative approaches and validate our model's robustness.</li> -->
+                <!-- <li><strong>Bernoulli Naive Bayes:</strong> Focuses on the presence or absence of words, ideal for detecting specific terms that help identify spam.</li> -->
+                <li><strong>CountVectorizer:</strong> Transforms raw text into a matrix of token counts, creating a structured format for the algorithms to process.</li>
+            </ul>
+
+            <h3>Project Integration</h3>
+            <p>We’ve integrated our machine learning model into a web application using the Flask framework. Users can:</p>
+            <ul>
+                <li><strong>Input Email Content:</strong> Paste or type email content into the input field.</li>
+                <li><strong>Receive Classification:</strong> Get instant results on whether the email is classified as spam or ham based on our model's predictions.</li>
+            </ul>
+
+            <h3>Why It Matters</h3>
+            <p>Spam emails can be a major nuisance and pose security risks. By automating the classification process, Spam Ya Genuine helps keep your inbox organized and secure, prioritizing important messages while filtering out unwanted spam.</p>
+
+            <h3>About Me</h3>
+            <div class="profile">
+                <img src="profile-pic.jpg" alt="Profile Picture">
+                <div>
+                    <h4>Vinayak Khandelwal</h4>
+                    <p>Hello! I'm Vinayak Khandelwal, the creator of Spam Ya Genuine. I’m really passionate about technology and have a strong background in data science. I love working on projects that make everyday tasks simpler and more efficient. My interest in tech started with a fascination for artificial intelligence and its ability to change how we live and work.</p>
+                    <p>Alongside my work in data science, I also have skills in web development, including HTML, CSS, JavaScript, and the Flask framework to build user-friendly websites and applications.</p>
+                    <p>When I'm not working, I enjoy keeping up with the latest tech trends, reading science fiction, and spending time outdoors. If you have any questions or just want to chat, feel free to get in touch!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Spam Ya Genuine. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="https://twitter.com/" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/VinayakKhandelwal07/Machine_Learning-Projects/tree/main/Email_Classification" target="_blank" title="github
+            "><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vinayak-khandelwal-b3216425a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+</body>
+
+</html>
