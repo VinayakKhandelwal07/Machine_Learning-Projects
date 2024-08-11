@@ -1,1 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Guider - Crop Recommendation Tool</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/back_ground.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f4f4f4;
+        }
+        .hero {
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .hero h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #d1d127;
+            font-weight: bolder;
+        }
+        .hero p {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+            color: rgb(192, 152, 8);
+        }
+        .btn-primary {
+            background-color: #2E8B57; /* Nature green color */
+            border: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #3CB371; /* Lighter green for hover effect */
+        }
+        header {
+            border-bottom: 4px solid #00A3E0; /* River water blue accent */
+        }
+        .navbar {
+            background-color: #2E8B57; /* Nature green color */
+            padding: 15px 30px;
+        }
+        .navbar-brand {
+            font-size: 1.75em;
+            font-weight: bold;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        .navbar-brand:hover {
+            color: #fff; /* White color on hover for consistency */
+        }
+        .nav-link {
+            font-size: 1.1em;
+            color: #ffffff;
+            padding: 10px 15px;
+            transition: color 0.3s, background-color 0.3s;
+        }
+        .nav-link:hover {
+            color: #00A3E0; /* River water blue on hover */
+            background-color: rgba(43, 190, 213, 0.777); 
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #2E8B57; /* Nature green color */
+            color: #00A3E0; /* River water blue */
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-media a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
+        .social-media a:hover {
+            color: #00A3E0; /* River water blue for hover effect */
+        }
+    </style>
+</head>
+<body>
 
+    <!-- Header -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="#">Farmer Guider</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/project">Get Crop Suggestions</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Welcome to Farmer Guider</h1>
+            <p>Your ultimate tool for choosing the best crops based on your environment</p>
+            <a href="/project" class="btn btn-primary">Get Crop Suggestions</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Farmer Guider. All rights reserved.</p>
+        <div class="social-media">
+            <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/VinayakKhandelwal07/Machine_Learning-Projects/tree/main/Crop_Prediction_Model" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/vinayak-khandelwal-b3216425a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
