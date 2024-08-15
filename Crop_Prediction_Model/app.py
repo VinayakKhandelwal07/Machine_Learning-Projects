@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 import pandas as pd
 
-# Load the KMeans model, scaler, and data
+# Load the KMeans model, scaler, and data 
 kmeans = joblib.load('models/kmeans_model.lb')
 std = joblib.load('models/standardscaler.lb')
 df = pd.read_csv('models/filtering_data.csv')
